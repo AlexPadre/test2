@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Work!</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+<body>
+  <h1>Time to work!</h1>
+  <div class="columns">
+    <div class="column">
+      <p2>1. Add an image:</p2> <br>
+      <img id="mine" src="mine.JPG" alt="my guitar" width="300px" height="200px"> <br>
+      <p2 id="one">2. Changing a paragraph to another string after a button with onclick type: </p2> <br>
+      <button type="button" onclick='document.getElementById("one").innerHTML = "Badumtss!"'>Click here!</button> <br>
+      <p2>3. Changing CSS style using JavaScript: </p2> <br>
+      <button type="button" onclick='document.getElementById("mine").style.width="600px"'>Click here to change the width to 600px:</button> <!-- after adding the bulma columns, the width changed the height as well after the code execution -->
+      <button type="button" onclick='document.getElementById("mine").style.width="300px"'>Click to reset to original picture:</button> <br>
+      <p2>4. Even/Odd test using input, output in message alert: </p2> <br>
+      <div>
+        <input type="text" name="" id="1" value="">
+      </div>
+      <script src="par_impar.js"></script>
+      <button onclick="myFunction()">Click to check!</button>  <br>
+      <p2>5. Output in HTML using Javascript: </p2>
+      <p id="math"></p>
+      <script>
+        document.getElementById("math").innerHTML = "This will output the value of 3" + "<sup>2</sup>" + " which is " + Math.pow(3,2);  //this can be done also with document.write(12/3)  or   console.log()
+        //using document.write() DELETES all the existing code to that point
+      </script>
+      <p2>6. Outputting the date: </p2>
+      <p1 id="data"></p1>
+      <script src="date.js"></script>
+      <br>
+      <p2>7. Outputting values from objects: </p2>
+      <p id="car"></p>
+      <script src="car.js"></script>
+      <p2>8. Transform from Fahrenheit to Celsius function: </p2>
+      <div>
+        <input type="text" name="" id="2" value="">
+      </div>
+      <script src="temperature.js"></script>
+      <button onclick="toCelsius()">Click to transform!</button>  <br>
+      <p id="grade"></p>
+      <p2>9. String opperations: </p2>
+      <p id="nine"></p>
+      <p id="nine1"></p>
+      <p id="nine2"></p>
+      <script>
+        var txt = "Alex are mere are.";
+        var sir = "Inghetata, pizza, lapte, branza";
+        var pos = txt.indexOf("are");
+        var pos1 = txt.lastIndexOf("are",15);  //index where 'are' starts in the string
+        var pos2 = txt.search("mere");
+        var parts = sir.slice(11,16); //negative parameters for slice() function returns the characters read from right to left.
+        var parts2 = sir.substr(11,5);
+        var up = sir.toUpperCase();
+        var conc = txt.concat(" ", sir);
+        var whitespace = "          Ingredients         .";
+        var xyz = whitespace.trim();
+        //if the text is not found, the function returns -1
+        document.getElementById("nine").innerHTML = "Index of 'are' is " + pos + ". Last index where 'are' appears is " + pos1 + ". This one searches the index of 'mere': " + pos2 +".";
+        document.getElementById("nine1").innerHTML = "Selecting characters for output: " + parts + ". This one will output the same as the slice(), only that the 2<sup>nd</sup> argument is the length of the string returned: " + parts2;
+        document.getElementById("nine2").innerHTML = "Converting sir to Upper Case Letters: " + up + ". Concat result of sir and txt: " + conc + ". Removing whitespace from string using trim() function:" + xyz + ".";
+      </script>
+      <p2>10. Arrays operation: </p2>
+      <p id="ten"></p>
+      <p id="ten1"></p>
+      <p id="ten2"></p>
+      <p id="ten3"></p>
+      <script>
+        var yumy = new Array("Pasta", "IceCream", "Coffee", "Tea");
+        var out;                  //I will use this to output the yumy array as a list
+        var third = yumy[2];      //to change an element we use yumy[i] = "new value";
+        output = "<ul>";          //unordered list before outputting
+        var i;                    //variable using for parsing
+        for (i = 0; i < yumy.length; i++){
+          output = output + "<li>" + yumy[i] + "</li>";
+        }
+        output = output + "</ul>";
+        document.getElementById("ten").innerHTML = "The 3<sup>rd</sup> element of the yumy array is: " + third + ".";
+        document.getElementById("ten1").innerHTML = "The list with the array's elements is: " + output;
+        yumy.push("Uninvited_Guest");
+        document.getElementById("ten2").innerHTML = "Adding an 'Uninvited_Guest':<br>" + yumy;
+        yumy.pop("Uninvited_Guest");
+        document.getElementById("ten3").innerHTML = "Removing the 'Uninvited_Guest':<br>" + yumy;
+      </script>
+    </div>
+    <br>
+    <div class="column">
+      <p2>11. Dice-throw app: </p2>
+        <div id="zarr"></div>
+        <script>
+          function zar() {
+          var xxx = Math.floor(Math.random() * 6)+1;
+          var yyy = Math.floor(Math.random() * 6)+1;
+          document.getElementById("raz").innerHTML = "You threw: " + xxx + " " + yyy;
+          }
+
+        </script>
+        <p id="raz"></p>
+        <img onclick = "zar()" src="zar.jpg" alt="zaruri" width="100px" height="100px"></img> <br>
+      <p2>12. Using while function: </p2>
+      <p id="twelve"></p>
+      <script>
+        var i=1,s=0;
+        while(i<10) {
+          s += "<br>Output with index " + i + " is " + i;
+          i++;
+        }
+        document.getElementById("twelve").innerHTML = s;
+      </script>
+      <p2>13. Fors: </p2> <br>
+      <script>
+        var j;
+        for(j=5;j>=0;j--)  {
+          console.log(j); //will output in console the numbers from 5 to 0.
+        }
+        for(j=0;j<=10;j+=2) {
+          console.log(j) //will output in console the even numbers starting from 0 to 10.
+        }
+      </script>
+      <p2>14. Color pattern app: </p>
+      <script src="col_patt.js"></script>
+      <div class="test"></div>
+      <div>
+        <input type="text" name="" id="col1" value="">
+      </div>
+      <div>
+        <input type="text" name="" id="col2" value="">
+      </div>
+      <div>
+        <input type="text" name="" id="col3" value="">
+      </div>
+      <button type="button" name="button" onclick="changeColor()">update color</button> <br>
+      <p2>15. Case switch: </p2>
+      <p id="fort"></p>
+      <script src = "day_switch.js"></script>
+    </div>
+  </div>
+</body>
+</html>

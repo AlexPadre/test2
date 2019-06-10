@@ -1,0 +1,37 @@
+body {
+  background-image: url("wallpaper.jpg");
+  background-attachment: fixed;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color:yellow;
+}
+
+#mine img {
+    width: 200px;
+    height: 200px;
+}
+
+p1 {
+  color: white;
+}
+
+p2 {
+  color: #7CFA1E;
+}
+
+#zarr img {
+  background-image: url("zar.jpg");
+  width: 100px;
+  height: 100px;
+}
+
+.test {
+  background-color: #4c4c4c;
+  width: 400px;
+  height: 400px;
+}
